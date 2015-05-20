@@ -30,14 +30,44 @@ angular.module('suhiColorApp', [])
   })
 
  .filter('summary', function(){
-  	return function(input){
-	    input = input || '';
-	    var out = 0;
-	    for (var i = 0; i < input.length; i++) {
-	      out = out + Number(input.charAt(i));
-	    }
-	    return out;
-  	}
+    return function(input){
+      input = input || '';
+      var out = 0;
+      for (var i = 0; i < input.length; i++) {
+        out = out + Number(input.charAt(i));
+      }
+      return out;
+    }
+  })
+
+ .filter('vowel', function(){
+    return function(input){
+      input = input || '';
+      var out = '';
+      for (var i = 0; i < input.length; i++) {
+        var ch = input.charAt(i);
+        var re = /[aAeEiIoOuU]/;
+        if(re.test(ch)){
+          out = out + ch;
+        }
+      }
+      return out;
+    }
+  })
+
+ .filter('consonant', function(){
+    return function(input){
+      input = input || '';
+      var out = '';
+      for (var i = 0; i < input.length; i++) {
+        var ch = input.charAt(i);
+        var re = /[bBcCdDfFgGhHjJkKlLmMnNpPqQrRsStTuUvVwWxXyYzZ]/;
+        if(re.test(ch)){
+          out = out + ch;
+        }
+      }
+      return out;
+    }
   })
 
 })();

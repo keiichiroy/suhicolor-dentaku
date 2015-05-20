@@ -9,6 +9,14 @@
 <input type="text" ng-model="nameform" placeholder="Enter your name here.."></input> <br/><br/>
 name: {{nameform}} <br/>
 number: {{nameform|char2num}} <br/>
-sum: {{nameform|char2num|summary}}
+sum: {{nameform|char2num|summary}} <br/>
+<br/>
+vowels: {{nameform|vowel}} <br/>
+vowels number: {{nameform|vowel|char2num}} <br/>
+vowels sum: {{nameform|vowel|char2num|summary}} <br/>
+<br/>
+consonants: {{nameform|consonant}} <br/>
+consonants number: {{nameform|consonant|char2num}} <br/>
+consonants sum: {{nameform|consonant|char2num|summary}} <br/>
 </body>
 </html>
