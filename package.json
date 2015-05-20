@@ -1,0 +1,19 @@
+{
+  "name": "suhicolor-dentaku",
+  "version": "1.0.0",
+  "description": "suhicolor-dentaku",
+  "main": "index.js",
+  "dependencies": {
+    "local-web-server": "^0.5.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keiichiro Yamamoto <k.yanmar@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "."
+  }
+}
