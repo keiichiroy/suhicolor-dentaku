@@ -2,8 +2,15 @@
 
 angular.module('suhiColorApp', [])
 
-  .controller('suhiColorCtrl', function() {
-  })
+  .controller('suhiColorCtrl',['$scope', function($scope) {
+
+    // Init callback
+    $scope.init = function(){
+      //console.log('suhicolordentaku.init');
+    }
+    $scope.init();
+
+  }])
 
   .filter('char2num', function(){
   	return function(input){
