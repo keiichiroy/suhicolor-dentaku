@@ -10,7 +10,7 @@ angular.module('suhiColorApp', [])
 	    input = input || '';
 	    var out = "";
 	    for (var i = 0; i < input.length; i++) {
-	      out = out + input.charAt(i);
+	      out = out + input.charCodeAt(i);
 	    }
   		return out;
   	}
