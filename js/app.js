@@ -52,7 +52,7 @@ angular.module('suhiColorApp', [])
       input = String(input);
 
       if(input.length < 2 || input === '11' || input === '22' || input === '33'){
-        console.log('Exit: '+ input);
+        //console.log('Exit: '+ input);
         return input;
       }
 
@@ -61,7 +61,7 @@ angular.module('suhiColorApp', [])
         out = out + Number(input.charAt(i));
       }
 
-      console.log('continue: '+out);
+      //console.log('continue: '+out);
       return $filter('summary')(String(out));
     }
   }])
