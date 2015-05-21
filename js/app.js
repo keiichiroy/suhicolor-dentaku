@@ -2,6 +2,11 @@
 
 angular.module('suhiColorApp', [])
 
+  /**
+   * @ngdoc controller
+   * @name suhiColorCtrl
+   * @description App controller
+   */
   .controller('suhiColorCtrl',['$scope', function($scope) {
 
     // Init callback
@@ -12,6 +17,11 @@ angular.module('suhiColorApp', [])
 
   }])
 
+  /**
+   * @ngdoc filter
+   * @name char2num
+   * @description convert each one character to number (1 to 9), through ascii code.
+   */
   .filter('char2num', function(){
   	return function(input){
 	    input = input || '';
@@ -29,6 +39,11 @@ angular.module('suhiColorApp', [])
   	}
   })
 
+  /**
+   * @ngdoc filter
+   * @name summary
+   * @description calculate sum of all number strings (use after alphabet is converted to number)
+   */
  .filter('summary', function(){
     return function(input){
       input = input || '';
@@ -40,6 +55,11 @@ angular.module('suhiColorApp', [])
     }
   })
 
+  /**
+   * @ngdoc filter
+   * @name vowel
+   * @description extract vowel characters
+   */
  .filter('vowel', function(){
     return function(input){
       input = input || '';
@@ -55,6 +75,11 @@ angular.module('suhiColorApp', [])
     }
   })
 
+  /**
+   * @ngdoc filter
+   * @name consolant
+   * @description extract consonant characters
+   */
  .filter('consonant', function(){
     return function(input){
       input = input || '';
