@@ -6,7 +6,16 @@
   <script src="js/app.js"></script>
 </head>
 <body ng-controller="suhiColorCtrl">
-<input type="text" ng-model="nameform" placeholder="Enter your name here.."></input> <br/><br/>
+<input type="text" ng-model="nameform" placeholder="Enter your name here.."></input> <br/>
+<select ng-model="year" ng-options="year for year in years" placeholder="Year"></select>
+<select ng-model="month" ng-options="month for month in months"></select>
+<select ng-model="day" ng-options="day for day in days"></select>
+ <br/><br/>
+birthday: {{year}}/{{month}}/{{day}} <br/>
+number: {{year|summary}}, {{month|summary}}, {{day|summary}} <br/>
+lifepath: {{ (year|summary) + (month|summary) + (day|summary) | summary }} <br/>
+lifepath: {{ year + month + day | summary }} <br/>
+<br/>
 name: {{nameform}} <br/>
 number: {{nameform|char2num}} <br/>
 destiny number: {{nameform|char2num|summary}} <br/>

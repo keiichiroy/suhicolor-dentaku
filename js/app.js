@@ -8,7 +8,17 @@ angular.module('suhiColorApp', [])
    * @description App controller
    */
   .controller('suhiColorCtrl',['$scope', function($scope) {
-
+    var D = new Date();
+    $scope.years = [];
+    $scope.months = [];
+    $scope.days = [];
+    for(var i=1900;i<D.getFullYear()+1;i++){ $scope.years.push(i); }
+    for(var i=1;i<13;i++){ $scope.months.push(i); }
+    for(var i=1;i<32;i++){ $scope.days.push(i); }
+    $scope.year = $scope.years[$scope.years.length-1];
+    $scope.month = D.getMonth()+1;
+    $scope.day = D.getDate();
+    //console.log($scope.year+'/'+$scope.month+'/'+$scope.day);
     // Init callback
     $scope.init = function(){
       //console.log('suhicolordentaku.init');
