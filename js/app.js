@@ -107,7 +107,7 @@ angular.module('suhiColorApp', [])
       var out = '';
       for (var i = 0; i < input.length; i++) {
         var ch = input.charAt(i);
-        var re = /[bBcCdDfFgGhHjJkKlLmMnNpPqQrRsStTuUvVwWxXyYzZ]/;
+        var re = /[bBcCdDfFgGhHjJkKlLmMnNpPqQrRsStTvVwWxXyYzZ]/;
         if(re.test(ch)){
           out = out + ch;
         }
